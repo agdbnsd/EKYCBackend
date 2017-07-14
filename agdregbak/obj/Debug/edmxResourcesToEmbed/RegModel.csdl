@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AGDRegModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="request">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="service_code" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="register_id" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="AGDRegEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="requests" EntityType="Self.request" />
+    <EntitySet Name="services" EntityType="AGDRegModel.service" />
+    <EntitySet Name="servicetypes" EntityType="AGDRegModel.servicetype" />
+    <EntitySet Name="registers" EntityType="AGDRegModel.register" />
+  </EntityContainer>
+  <EntityType Name="service">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="type_id" Type="Int32" />
+    <Property Name="priority" Type="Int32" />
+  </EntityType>
+  <EntityType Name="servicetype">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="priority" Type="Int32" />
+  </EntityType>
+  <EntityType Name="register">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <Property Name="mobile" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="postal" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="nrcfront" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="nrcback" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="service_Id" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="refno" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="create_date" Type="DateTime" Precision="3" />
+    <Property Name="review_date" Type="DateTime" Precision="3" />
+    <Property Name="review_message" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="fathername" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="nrcno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="signature" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

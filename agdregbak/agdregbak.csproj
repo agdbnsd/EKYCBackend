@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B21B03E-7461-4AFC-B12A-B4F997215656}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>agdregbak</RootNamespace>
+    <AssemblyName>agdregbak</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImageResizer">
+      <HintPath>..\packages\ImageResizer.4.1.9\lib\net45\ImageResizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Cors\AllowCrossSiteAttributes.cs" />
+    <Compile Include="Enc\RSAHelper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Http\HttpHelper.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="request.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="service.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="servicetype.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adm\assets\logo-DarkBg.png" />
+    <Content Include="adm\favicon.ico" />
+    <Content Include="adm\index.html" />
+    <Content Include="adm\inline.4a948f4723bc9d9f0402.bundle.js" />
+    <Content Include="adm\inline.76746987519a2b63c4a7.bundle.js" />
+    <Content Include="adm\inline.889cc5b6dc54af09e4d4.bundle.js" />
+    <Content Include="adm\inline.96b1b97c7d21c6d81110.bundle.js" />
+    <Content Include="adm\inline.bundle.js" />
+    <Content Include="adm\inline.de2c0515a1a2f49e5004.bundle.js" />
+    <Content Include="adm\inline.e4094f7d707c829519bc.bundle.js" />
+    <Content Include="adm\main.1af02e09c0aa5fc71b71.bundle.js" />
+    <Content Include="adm\main.429123f7130ea1b9e464.bundle.js" />
+    <Content Include="adm\main.5cfb73f89d5258675023.bundle.js" />
+    <Content Include="adm\main.5f047596dad43f83f0cd.bundle.js" />
+    <Content Include="adm\main.bundle.js" />
+    <Content Include="adm\main.ce81c085858f0da8fa3f.bundle.js" />
+    <Content Include="adm\main.dd3761d83f1fd8eef669.bundle.js" />
+    <Content Include="adm\polyfills.698f565ebc53d7a14d6d.bundle.js" />
+    <Content Include="adm\polyfills.bundle.js" />
+    <Content Include="adm\styles.470e74c66c8b6f820160.bundle.css" />
+    <Content Include="adm\styles.bdcfc5227d73eb2df000.bundle.css" />
+    <Content Include="adm\styles.bundle.js" />
+    <Content Include="adm\vendor.89b1eeb9c8df9b31f2ad.bundle.js" />
+    <Content Include="adm\vendor.9c1dcf71827cf233a881.bundle.js" />
+    <Content Include="adm\vendor.bad260fbe61d5d207720.bundle.js" />
+    <Content Include="adm\vendor.bundle.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="dist\assets\agdpay.jpg" />
+    <Content Include="dist\assets\agdpay2.jpg" />
+    <Content Include="dist\assets\agdpay3.jpg" />
+    <Content Include="dist\assets\Boy-Card.jpg" />
+    <Content Include="dist\assets\download.jpg" />
+    <Content Include="dist\assets\FDRATE_II.jpg" />
+    <Content Include="dist\assets\Girl-Card.jpg" />
+    <Content Include="dist\assets\logo-DarkBg.png" />
+    <Content Include="dist\favicon.ico" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\inline.21faec9c6bb34a0ea5a4.bundle.js" />
+    <Content Include="dist\inline.29a1b0802391df33e336.bundle.js" />
+    <Content Include="dist\inline.2a65df680861b8cdca0e.bundle.js" />
+    <Content Include="dist\inline.34c89f0ffe3cae8b05eb.bundle.js" />
+    <Content Include="dist\inline.3e4b1947c30dd2ee5263.bundle.js" />
+    <Content Include="dist\inline.4382cb78e166bb58d22a.bundle.js" />
+    <Content Include="dist\inline.45d4c1c2e9e5f0dbe825.bundle.js" />
+    <Content Include="dist\inline.45f1f851e63591892f52.bundle.js" />
+    <Content Include="dist\inline.4b2124e7c256913086ba.bundle.js" />
+    <Content Include="dist\inline.573263340327fb0f16ac.bundle.js" />
+    <Content Include="dist\inline.7846d57b215b675ffb78.bundle.js" />
+    <Content Include="dist\inline.8cf64c4be30d27dce558.bundle.js" />
+    <Content Include="dist\inline.99150b85d536826bdf81.bundle.js" />
+    <Content Include="dist\inline.a09e5bb28595e7af8d42.bundle.js" />
+    <Content Include="dist\inline.b84040689fe18dbcd671.bundle.js" />
+    <Content Include="dist\inline.bundle.js" />
+    <Content Include="dist\inline.c307fd0d376bad793170.bundle.js" />
+    <Content Include="dist\inline.c5eb55bdf0896f66665b.bundle.js" />
+    <Content Include="dist\inline.c7fb5a240ce115b14201.bundle.js" />
+    <Content Include="dist\inline.ca5d496cf8fba61427d6.bundle.js" />
+    <Content Include="dist\inline.d8d62383eeb839d540ff.bundle.js" />
+    <Content Include="dist\inline.ea6a0dedcaa50be0c986.bundle.js" />
+    <Content Include="dist\inline.ee34d761b5dcb822bcbb.bundle.js" />
+    <Content Include="dist\main.05eee51ce6df0d59af55.bundle.js" />
+    <Content Include="dist\main.23f5e4df29061c8ed387.bundle.js" />
+    <Content Include="dist\main.379cf875cac542470e07.bundle.js" />
+    <Content Include="dist\main.39d6abfac897780c294f.bundle.js" />
+    <Content Include="dist\main.4ccef9fb331cd2675fde.bundle.js" />
+    <Content Include="dist\main.55743effdcb4f2bf10a0.bundle.js" />
+    <Content Include="dist\main.5bcf5392301a0493f11a.bundle.js" />
+    <Content Include="dist\main.66bcc2755c44c88ebe3b.bundle.js" />
+    <Content Include="dist\main.6c53dc49007d7639eb3d.bundle.js" />
+    <Content Include="dist\main.6edce77e2d6e2d9678b7.bundle.js" />
+    <Content Include="dist\main.73538f8ffb1270a9f846.bundle.js" />
+    <Content Include="dist\main.a6d0cc8d107f299cf966.bundle.js" />
+    <Content Include="dist\main.b090cd4c20d7530ab8da.bundle.js" />
+    <Content Include="dist\main.bundle.js" />
+    <Content Include="dist\main.c1d6562110e20cc6cb88.bundle.js" />
+    <Content Include="dist\main.ccdd83667434cf7f044a.bundle.js" />
+    <Content Include="dist\main.da6a0cbc4ba1b7898629.bundle.js" />
+    <Content Include="dist\main.e0d80e0f68f71acf0e21.bundle.js" />
+    <Content Include="dist\main.e6e99730d45cd7937602.bundle.js" />
+    <Content Include="dist\main.ed2efa3a8b25a69c6d3b.bundle.js" />
+    <Content Include="dist\main.f0cba6f5df596c7b24ec.bundle.js" />
+    <Content Include="dist\main.fa35a836bc184c1c9c4c.bundle.js" />
+    <Content Include="dist\main.fa58b934779fa4f02d55.bundle.js" />
+    <Content Include="dist\polyfills.698f565ebc53d7a14d6d.bundle.js" />
+    <Content Include="dist\polyfills.bundle.js" />
+    <Content Include="dist\styles.59655c8bcaf4bdef43c3.bundle.css" />
+    <Content Include="dist\styles.73863e06bcedbbbffccb.bundle.css" />
+    <Content Include="dist\styles.88a91267bf43dc33d3a7.bundle.css" />
+    <Content Include="dist\styles.88b39daf9b7ce2ad9833.bundle.css" />
+    <Content Include="dist\styles.9212c4637db9dfc4907e.bundle.css" />
+    <Content Include="dist\styles.9ff5eff6ea7d6a6fb242.bundle.css" />
+    <Content Include="dist\styles.a5e49c181e490f1b2e3f.bundle.css" />
+    <Content Include="dist\styles.bundle.js" />
+    <Content Include="dist\styles.de123e686fcf9acbd760.bundle.css" />
+    <Content Include="dist\styles.efd1554ddd19560ba995.bundle.css" />
+    <Content Include="dist\styles.f1628df4448e46ab1271.bundle.css" />
+    <Content Include="dist\vendor.411b2f9c7106d7ab410b.bundle.js" />
+    <Content Include="dist\vendor.570beedea7014c1c12c6.bundle.js" />
+    <Content Include="dist\vendor.5963790551f43c4cb2ce.bundle.js" />
+    <Content Include="dist\vendor.5f2d64156d751892d2a1.bundle.js" />
+    <Content Include="dist\vendor.7e5eb2be860a14a426a2.bundle.js" />
+    <Content Include="dist\vendor.bundle.js" />
+    <Content Include="dist\vendor.f39b0cfd02c77acca60f.bundle.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="RegModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RegModel.edmx</DependentUpon>
+      <LastGenOutput>RegModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="RegModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RegModel.edmx</DependentUpon>
+      <LastGenOutput>RegModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="RegModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RegModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="RegModel.edmx.diagram">
+      <DependentUpon>RegModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="adm\inline.bundle.js.map" />
+    <Content Include="adm\main.bundle.js.map" />
+    <Content Include="adm\polyfills.bundle.js.map" />
+    <Content Include="adm\styles.bundle.js.map" />
+    <Content Include="adm\vendor.bundle.js.map" />
+    <Content Include="dist\inline.bundle.js.map" />
+    <Content Include="dist\main.bundle.js.map" />
+    <Content Include="dist\polyfills.bundle.js.map" />
+    <Content Include="dist\styles.bundle.js.map" />
+    <Content Include="dist\vendor.bundle.js.map" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="IndentityUpload\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57062</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57062/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
